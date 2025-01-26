@@ -1,0 +1,76 @@
+.private-route-container {
+    position: relative;
+  }
+  
+  .private-route-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+.private-route-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.private-route-card h2 {
+    color: #1a3a6d;
+    margin-bottom: 20px;
+}
+
+.private-route-card p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.private-route-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.private-route-links .btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.private {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #497ce3;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.private:hover {
+    background-color: #2d5ec1;
+    transform: scale(1.05);
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

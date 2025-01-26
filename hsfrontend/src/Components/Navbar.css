@@ -1,0 +1,120 @@
+.custom-navbar {
+    z-index: 1050; 
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    padding: 1rem 2rem !important;
+    position: relative; 
+  }
+
+.brand-container {
+    transition: transform 0.3s ease;
+}
+
+.brand-container:hover {
+    transform: translateY(-1px);
+}
+
+.brand-name {
+    color: #1a3a6d !important;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.brand-name:hover {
+    color: #2d5ec1 !important;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-link {
+    position: relative;
+    color: #2d3436 !important;
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #2d5ec1 !important;
+    transform: translateY(-1px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #2d5ec1;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+
+    .brand-name:hover {
+        color: #2d3436 !important;
+    }
+
+    .navbar-collapse {
+        z-index: 1050; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.2s ease-in;
+        transition-delay: 0.2s;
+        overflow: hidden; 
+      }
+    
+      .navbar-collapse.show {
+        max-height: 300px;
+        opacity: 1;
+        overflow: visible; 
+      }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .nav-item {
+        transition: all 3.9s ease;
+    }
+
+    .nav-link {
+        padding: 0.7rem 1rem;
+        border-radius: 6px;
+    }
+
+    .nav-link::after {
+        content: none; 
+    }
+
+}

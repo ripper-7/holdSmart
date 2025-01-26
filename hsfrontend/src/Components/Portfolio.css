@@ -1,0 +1,224 @@
+.portfolio-container {
+  padding: 2rem;
+  width: 95%;
+  align-items: center;
+  margin: 2rem auto;
+  background-color: #e8eefa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+  .portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .portfolio-header h1 {
+    color: #1a3a6d;
+    margin: 0;
+  }
+  
+  .loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #dce5f7; 
+    z-index: 1000; 
+    color: #1a3a6d;
+  }
+  
+  .add-btn {
+    background-color: #497ce3;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-btn:hover {
+    background-color: #2d5ec1;
+    color: #fff;
+  }
+
+  .card{
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  
+  .card-title {
+    color: #1a3a6d;
+  }
+  
+  .blurred {
+    filter: blur(5px);
+    transition: 0.1s ease-in-out;
+  }
+
+  .modal {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+
+  .stocks-table {
+    width: 100%;
+    overflow-x: auto; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stocks-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  
+  .stocks-table th, .stocks-table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .stocks-table th {
+    background-color: #fff;
+    font-weight: bold;
+  }
+  
+  .stocks-table tr {
+    font-weight: bold;
+  }
+  
+  .stocks-table tr:nth-child(even) {
+    background-color: #fff;
+  }
+
+  .stocks-table tr:nth-child(odd) {
+    background-color: #e9f0fc;
+  }
+  
+  .stocks-table .actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .stocks-table .icon-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .stocks-table .icon-button.delete {
+    color: red;
+  }
+  
+  .positive {
+    color: green;
+  }
+  
+  .negative {
+    color: red;
+  }
+  
+
+  
+  .actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    color:#2d5ec1
+  }
+  
+  .icon-button:hover {
+    background-color: #a4c3ff;
+    color:#081e4a
+  }
+  
+  .icon-button.delete:hover {
+    background-color: #f8bbbb;
+    color: #ef4444;
+  }
+  
+  .empty-portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+  
+  .empty-message {
+    text-align: center;
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .empty-message h2 {
+    color: #1a3a6d;
+    margin-bottom: 1rem;
+  }
+  
+  .empty-message p {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .add-stock-btn {
+    background-color: #497ce3;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+  
+  .add-stock-btn:hover {
+    background-color: #2d5ec1;
+    color: #fff;
+  }
+  
+  @media (max-width: 1024px) {
+    .portfolio-analysis {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .portfolio-container {
+      padding: 1rem;
+    }
+
+    .portfolio-analysis {
+      grid-template-columns: 1fr;
+    }
+  
+    .portfolio-header {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: stretch;
+      text-align: center;
+    }
+  
+    .stocks-table table {
+      font-size: 12px;
+    }
+    .stocks-table th, .stocks-table td {
+      padding: 8px;
+    }
+  }
