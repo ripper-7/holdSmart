@@ -1,7 +1,9 @@
 # holdSmart
 
 ## Description
-A Stock Portfolio Application where a user can access to a personalised dashboard
+- A Stock Portfolio Application where a user can access to a personalised dashboard where user can add, update, delete stocks.
+- Initially user can only view home page. They need to login or sign up to get access to the portfolio or add stocks.
+- User can view compare all the stocks they add into thier portfolio and analyse how they are performing and get summary of thier holdings.
 
 ## Prerequisites
 
