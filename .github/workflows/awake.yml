@@ -1,0 +1,15 @@
+name: Keep render awake ;}
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+
+jobs:
+  keep_awake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send login request to backend
+        run: |
+          curl -X POST "http://holdsmart-be.onrender.com/auth/login" \
+          -H "Content-Type: application/json" \
+          -d '{"email": "user123@gmail.com", "password": "12345678"}'
