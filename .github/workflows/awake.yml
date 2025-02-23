@@ -13,3 +13,4 @@ jobs:
           curl -X POST "http://holdsmart-be.onrender.com/auth/login" \
           -H "Content-Type: application/json" \
           -d '{"email": "${{ secrets.HOLDSMART_EMAIL }}", "password": "${{ secrets.HOLDSMART_PASSWORD }}"}'
+          echo "API Response: $RESPONSE"
