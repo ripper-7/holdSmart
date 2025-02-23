@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Send login request to backend
         run: |
-          RESPONSE=$(curl -s -X POST "http://holdsmart-be.onrender.com/auth/login" \
+          RESPONSE=$(curl -s -L -X POST "http://holdsmart-be.onrender.com/auth/login" \
           -H "Content-Type: application/json" \
           -d '{"email": "${{ secrets.HOLDSMART_EMAIL }}", "password": "${{ secrets.HOLDSMART_PASSWORD }}"}' \
           -w "\n%{http_code}")
